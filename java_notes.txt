@@ -465,3 +465,540 @@ App Development
                     
                 -> | (OR) : either one of bit is 1, then result is 1
                 -> etc            
+12th Sep 2025
+=============
+
+-> Install Extension : Extension Pack for Java
+
+    -> Folder Structure can be achieved using packages 
+
+-> Control Structures / Statements  
+
+    -> In Java, control Statements helps you control the flow of execution 
+
+    -> Control Structures Categories 
+
+        -> Conditional Statements (Decision Making Statements)
+
+        -> Looping Statements (Iteration Statements)
+
+        -> Branching Statements (Jump Statements) 
+
+    -> Conditional Statements 
+
+        -> if statement : runs block of code if the condition is true
+
+            if (condition is true) {
+                statements
+            }
+
+        -> if-else statement : runs one block of code if condition is true, and run another
+            block of code if condition is false
+
+                if (condition is true) {
+                    statements
+                } else {
+                    statements
+                }
+            
+            -> NOTE : Ternary operator / conditional operator, allows to write
+            concise form of if-else 
+
+                -> Syntax : variable = (condition) ? value_if_true:value_if_false
+
+                -> Use when assigning a value to variable based on condition 
+
+        -> else if ladder : used when you have multiple conditions to check
+
+                if (condition is true) {
+                    statements
+                } else if (condition is true) {
+                    statements
+                } else if (condition is true) {
+                    statements
+                } else if (condition is true) {
+                    statements
+                } else {
+                    statements
+                }
+
+        -> switch statement : alternative to if-else with multiple conditions 
+
+            switch(expression) {
+                case value1:
+                    // statement
+                    break;
+                case value2:
+                    // Statements
+                    break;
+                    .
+                    .
+                    .
+                default:
+                    // Statements
+                    break;
+            }
+
+13th Sep 2025
+=============
+
+-> Scanner in java is part of java.util (common utilities) package(collection of related classes)
+
+-> Scanner class will help in reading input 
+
+-> Scanner class has inbuilt methods 
+
+    -> nextInt() : reads integer values
+    -> nextDouble() : reads decimal values
+    -> next() : reads next word (string)
+    -> nextLine() : reads entire line (string)
+    -> etc 
+
+-> Nested Conditionals : Conditional inside Conditionals
+
+
+15th Sep 2025
+=============
+
+-> Looping Statements (Iteration Statements)
+
+    -> Looping statements are used to execute a block of code repeatedly, based on condition
+
+    -> Repetition, Automation etc
+
+    -> Looping Types:
+
+        -> for loop : used when you know number of Iterations / Repetitions in advance
+
+            for (init;condition;Increment/Decrement) {
+                statements
+            }
+
+        -> while loop : used when you don't know number of Iterations / Repetitions in advance 
+
+            int count = 1;
+            while (count <=5) {
+                System.out.println(count); 
+                count++;
+            }
+
+        -> do while loop : similar to while, but runs the code at least once, before checking the condition     
+
+        -> Nested Loops : Loops inside Loops
+
+            -> Table : rows & columns 
+            
+                -> 
+
+    -> Branching Statements (Jump Statements) 
+
+        -> break : used inside loops, to terminate (immediately exit) (already used in switch-case)
+        -> continue : used to skip current iteration
+        -> return : used to return a value
+
+16th Sep 2025
+=============
+
+-> OOPS 
+
+    -> Object Oriented Programming 
+
+    -> OOPS : We Structure Programs using Data and Behavior (Objects)
+
+    -> To work with OOPS Style we need an understanding of
+
+        -> Classes
+
+        -> Objects 
+
+        -> Methods 
+
+        -> Inheritance 
+
+        -> Encapsulation 
+
+        -> Abstraction 
+
+        -> Polymorphism 
+
+-> Any thing can in real world can be considered as Object
+
+    -> Laptop 
+    -> TV 
+    -> Phone 
+    -> Pen 
+    -> etc 
+
+-> Every Object has Data and Behavior (Objects)
+
+    -> Laptop 
+
+        -> Data (characteristics) (has)
+
+            -> Laptop Brand = String
+            -> Laptop Price = double 
+            -> Laptop Weight = double / int 
+            -> Laptop 4k Display = boolean 
+            -> etc
+
+        -> Behavior (actions) (do)
+
+            -> Laptop can play video 
+            -> Laptop can play audio
+            -> Laptop can read file
+            -> Laptop can take snap
+            -> etc 
+
+
+-> Class 
+
+    -> Class is a blueprint for creating Objects 
+
+    -> Class will have What Data (characteristics - variables) and Behavior (actions - methods)
+
+    -> Laptop (Class)
+
+            -> Apple Object
+                -> Laptop Brand = Apple
+                -> Laptop Price = 1000000 
+                -> Laptop Weight = 1.2
+                -> Laptop 4k Display = true 
+                -> etc
+
+                -> Apple Laptop can play video (4k)
+                -> Apple Laptop can play audio (25watts)
+                -> Apple Laptop can read file (in 2 sec)
+                -> Apple Laptop can take snap (12MP)
+                -> etc 
+
+            -> Dell Object
+                -> Laptop Brand = Dell
+                -> Laptop Price = 65000 
+                -> Laptop Weight = 2.5
+                -> Laptop 4k Display = false 
+                -> etc
+
+                -> Dell Laptop can play video (1080p)
+                -> Dell Laptop can play audio (10watts)
+                -> Dell Laptop can read file (in 5 sec)
+                -> Dell Laptop can take snap (5MP)
+                -> etc
+
+        -> Behavior (actions) (do)
+
+    
+-> Methods 
+
+    -> Behavior (actions)
+
+    -> A method is block of code that performs some task 
+
+
+-> Variables 
+
+    -> represents data (memory location)
+
+    -> Types Of Variables 
+
+        -> Instance Variables
+
+            -> Created inside the class and outside the method, without static keyword
+
+            -> Instance : Object of an class 
+
+            -> Instance Variables : Variables associated with objects 
+
+            -> Memory is allocated when object is created
+
+            -> Can have default values, if not initialized
+
+            -> Store in Heap Memory / Area
+
+
+        -> Local Variables
+
+            -> Created inside the methods and blocks / constructors 
+
+            -> Used for temporary calculations 
+
+            -> Once execution is completed, value become obsolete 
+
+            -> Variables should be declared and initialized
+
+        -> Static Variables (Global / Class)
+
+            -> Created inside the class and outside the method, with static keyword
+
+            -> Static Variables belongs to class not objects 
+
+            -> Used for static/fixed values (common data)
+
+            -> Variables should be declared and initialized
+
+            -> To access static variables we use Classname.variable
+
+    Type        Declared            BelongsTo       Memory          DefaultValue
+    local       method/block        method/block    Stack           Must initialize
+    instance    class(no static)    Object          Heap            Yes 
+    static      class(static)       Class           MethodArea      Yes 
+
+
+17th Sep 2025
+=============
+
+-> Methods : Task / Action we need methods
+
+-> Methods have signature 
+
+    -> Simple 
+
+        accessModifier returnType methodName ParameterList 
+        {
+            // method body
+        }
+
+    -> Complex 
+
+        accessModifier static/non-static returnType methodName ParameterList throws Exceptions
+        {
+            // method body
+        }
+
+19th Sep 2025
+=============
+
+-> Constructors
+
+    -> Method : Block of code that Performs a task 
+
+    -> Constructor : Block of code that initialize default values (special task)
+
+        -> Constructor is a special method that is automatically called, when object is created
+
+    -> Normal Methods (instance methods) what we learnt cannot be automatically called, we need to call them 
+
+        -> create object 
+        -> call method
+
+    -> In constructors, when we create object automatically constructor is called
+
+    -> Constructors are Mainly used for 
+
+        -> initialize default values
+        -> set start up value (perform start up operations)
+
+    -> NOTE :
+
+        -> Constructors name should always be class name only, unlike methods 
+
+        -> Constructor will not have return type 
+
+        -> Automatically invoked, unlike methods 
+
+    -> Types Of Constructors
+
+        -> Implicit / Default Constructors
+
+            -> Used to set all objects with same values 
+
+        -> Explicit / Parameterized Constructors
+
+            -> Used to set different objects with different values 
+
+            -> Constructor Overloading (Polymorphism)
+
+
+    -> this 
+
+        -> this is a keyword, that refers to current instance 
+
+        -> to avoid ambiguity, between variables and Parameters 
+
+        -> to distinguish between variables and Parameters with same name use this keyword
+
+    -> Constructor Overloading
+
+        -> Constructor Overloading in java is a concept where you define 
+            multiple Constructors with same name and different Parameters
+
+        -> Based on 
+
+            -> number of parameters
+            -> types of parameters
+            -> order of parameters
+
+            -> initialization may change  or logic may change
+
+22nd Sep 2025
+=============
+
+    -> this() : constructor call for calling another constructor
+
+    -> Using LMS App use case will understand, how constructors can be connected 
+        with default data 
+
+    
+23rd Sep 2025
+=============
+
+    -> int x = 10; (primitive data type, which can hold one value inside single variable)
+
+    -> My use case is holding multiple values in single variable
+
+        -> In java we have Collections Framework, to handle multiple values in single variable
+
+    -> We can start with arrays, which give the ability to handle multiple values in single variable
+
+    -> Arrays
+
+        -> Arrays are data Structures that holds multiple values 
+
+        -> Syntax 
+
+            -> datatype [] variable_name = new datatype[size];
+
+        -> Arrays have index numbers, starts from zero 
+
+        -> Array Types 
+
+            -> Single Dimensional Arrays
+
+                datatype [] variable_name = new datatype[size];
+
+            -> Multi Dimensional Arrays
+
+                datatype [][] variable_name = new datatype[size][size];
+                datatype [][][] variable_name = new datatype[size][size][size];
+
+24th Sep 2025
+=============
+
+    -> Continued from the previous Application,
+
+    -> Take inputs for 5 Subjects
+
+    -> Based on the above Subjects ==> Calculate scoreCredits
+
+    -> Strings 
+
+        -> A string is a collection or sequence of characters 
+
+        -> Strings are non-primitive type of data 
+
+        -> Strings are special datatype in java 
+
+            -> Strings are handled in different way compared to other classes
+
+        -> String Memory Management 
+
+            -> string memory pool is a place where same strings will be allocated 
+            with same memory address 
+
+        -> String Methods 
+
+
+
+25th Sep 2025
+=============
+
+    -> String Methods 
+
+        -> String class provides a rich set of methods to work with strings type of data 
+
+26th Sep 2025
+=============
+    
+    -> String Immutability 
+
+        -> Strings cannot be changed once created (fixed)
+
+        -> Strings are constant; their values cannot be changed after they are created.
+
+    -> Say we have string, when we perform any operation on Strings say like concat(), then
+        it results in creation of new objects 
+
+    -> This Approach leads to performance issues, when making lot of modifications on strings
+
+    -> To overcome this, Java has provided following classes to handle Mutable Strings
+
+        -> StringBuffer (Thread Safe)
+
+        -> StringBuilder(Not Thread Safe)
+
+    -> NOTE : 
+
+        -> Strings : Like Pen and Paper
+        -> StringBuffer & StringBuilder : Like White Board & Marker 
+
+    -> Upgrade Previous LMS App with CourseFee Calculation
+
+        -> Take Base CourseFee 
+        -> Take COUPON (PROMO) give 5000 discount 
+        -> Calculate Actual Fee To Pay After Discount 
+
+29th Sep 2025
+=============
+
+    -> Local Variables
+
+    -> Static Variables 
+
+    -> Instance Variables 
+
+    -> Static Methods
+
+    -> Static Blocks
+
+        -> used to initialize static variables
+
+    -> Instance Methods 
+
+    -> Instance Blocks
+
+
+    -> NOTE : How can we allocate memory to a java program ?
+
+        -> If memory is not allocated, we cannot run programs 
+
+            -> using new keyword (creating an object)
+
+            -> using static keyword (without creating object)
+
+    -> Assume Main is not static 
+
+        -> To Start Program Execution 
+
+        -> We need entry point i.e main method 
+
+        -> Main is not static 
+
+        -> Object needs to be created first 
+
+        -> But to create the object, java needs to execute program (begins a main)
+
+        -> Which again requires the object, this leads to Circular Dependency Problem 
+
+    -> To overcome above Circular Dependency Problem, java came up with static keyword 
+
+
+    -> Class Loader Subsystem 
+
+        -> First will write .java file 
+        -> We compile then we get .class file 
+        -> The .class file is loaded into Class Loader Subsystem 
+        -> Then class loader Subsystem, will look for static fields(variables, methods, blocks) are present
+        if present then immediately in method area, a memory block will be allocated (only once memory allocated)
+        -> Then class loader will look for Object Creation(new keyword), if present then 
+        immediately in heap area, a memory block will be allocated (for every object memory is allocated)
+
+    -> Object Created
+
+        Static Block Executed
+        Main Method Executed
+        Instance Block Executed
+        Constructor Executed
+
+    -> No Object Created
+
+        Static Block Executed
+        Main Method Executed
