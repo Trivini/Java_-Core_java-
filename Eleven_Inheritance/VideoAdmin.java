@@ -1,0 +1,43 @@
+package Eleven_Inheritance;
+
+public class VideoAdmin {
+    //video admin can watch vedios update the vedios but not delete vedios
+
+    public void watchVideo(){
+        System.out.println("W");
+        System.out.println("A");
+        System.out.println("T");
+        System.out.println("C");
+        System.out.println("H");
+        System.out.println("V");
+        System.out.println("I");
+        System.out.println("D");
+        System.out.println("E");
+        System.out.println("O");
+        System.out.println(".");
+        System.out.println(".");
+        System.out.println(".");
+
+
+    }
+
+    public void UpdateVideo(){
+        System.out.println("U");
+        System.out.println("P");
+        System.out.println("D");
+        System.out.println("A");
+        System.out.println("T");
+        System.out.println("E");
+        System.out.println("V");
+        System.out.println("I");
+        System.out.println("D");
+        System.out.println("E");
+        System.out.println("O");
+        System.out.println(".");
+        System.out.println(".");
+        System.out.println(".");
+
+
+    }
+    
+}
