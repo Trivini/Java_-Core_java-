@@ -381,6 +381,7 @@ App Development
             -> Arrays : Complex data type (prebuilt)
 
             -> Student : Complex data type (User defined)
+
 11th Sep 2025
 =============
 
@@ -464,7 +465,8 @@ App Development
 
                     
                 -> | (OR) : either one of bit is 1, then result is 1
-                -> etc            
+                -> etc
+
 12th Sep 2025
 =============
 
@@ -1002,3 +1004,293 @@ App Development
 
         Static Block Executed
         Main Method Executed
+
+
+30th Sep 2025
+=============
+
+    -> LMS with Static 
+
+    -> OOPS Principals 
+
+        -> Inheritance
+
+            -> Establishing relationship between Classes, so that we can achieve "REUSABILITY" 
+
+        -> Encapsulation 
+
+            -> Hiding Data 
+
+            -> Encapsulation means binding Data & Behavior together, we use Class 
+
+            -> Class Encapsulates Data & Behavior
+
+        -> Abstraction
+
+            -> Hiding Implementation (Internal Details)
+
+            -> Show only essential features required 
+
+        -> Polymorphism 
+
+            -> A Single Entity, Exhibit Multiple Forms 
+
+
+-> Inheritance
+
+    -> Inheritance means passing genetic traits from parents to their children 
+
+    -> Inheritance allows once class to inherit properties and methods from another class 
+
+    -> Class which inherits is called CHILD CLASS
+
+    -> Class that passes traits is called PARENT CLASS
+
+
+6th Oct 2025
+=============
+
+    -> Introduce Inheritance using "extends" keyword 
+
+    -> Types Of Inheritance
+
+        -> Single Level 
+
+            -> A class inherit from Single Parent Class 
+
+        -> Multi Level 
+
+            -> A class inherit from another class, which in turn inherits from another class 
+
+        -> Multiple 
+
+            -> A class inherits from more than one class / two or more classes
+
+            -> Java doesn't support Multiple Inheritance using Classes 
+
+            -> Java supports Multiple Inheritance using Interfaces 
+
+            -> Interface : Interfaces have abstract methods (No Implementation For Methods)
+
+            -> To achieve Multiple Inheritance we use "implements" keyword 
+
+        -> Hierarchal 
+
+            -> Multiple Classes Inherit from a Single Parent 
+
+        -> Hybrid 
+
+            -> Combination of at least two types of Inheritance is called Hybrid
+
+            -> When Working with interface we can extend another interface, but you cannot implements interface
+
+7th Oct 2025
+=============
+
+    -> In Our LMS App We currently have Student, Trainer Entities
+
+    -> In Future we might add Mentor, VideoAdmin, SuperAdmin 
+
+    -> Keeping REUSABILITY in context, will add a Common Entity For all above 
+
+        -> Person Class - Common Entity
+
+    -> super keyword 
+
+        -> allows you to access parent class attributes inside child class 
+
+    
+    -> Encapsulation
+
+        -> Encapsulation is an object-oriented programming (OOP) concept that involves 
+        bundling data (attributes) and the methods (functions) that operate on that data 
+        into a single unit, called a class.
+
+        -> Data Hiding 
+
+            -> Access Modifiers 
+
+                -> Public 
+
+                -> Private 
+
+                -> Protected 
+
+                -> Default
+
+            -> Above Applies for all entities in java like variables, methods etc 
+
+            -> NOTE : Only On Top Level Classes we can use, only public and default 
+
+
+8th Oct 2025
+=============
+
+    -> NOTE : You cannot make Top level classes as private and protected 
+
+        -> No Issues with public and default 
+
+    -> NOTE : it’s not good practice, to directly allow object to be changed like
+        in NewStudent and Teacher  
+
+    -> Using Access Modifier like private, we are not allowing to update object directly like earlier 
+
+    -> If we keep private then we cannot update object data directly (Good Practice)
+
+    -> If Updated is required then how ?
+
+        -> Setters & Getters 
+
+    -> Encapsulation 
+
+        -> How Getters and Setters Facilitate Encapsulation:
+        
+        -> Data Hiding: Class variables are declared as private. 
+        This prevents direct access and modification of these variables 
+        from outside the class, effectively hiding the internal state of the object.
+
+
+        -> Controlled Access: Instead of direct access, public getter (accessor) and 
+            setter (mutator) methods are provided.
+    
+        -> Getter methods (e.g., getName()): retrieve the value of a private variable. 
+        They typically follow the naming convention get + VariableName 
+        (with the first letter of the variable name capitalized).
+        
+        -> Setter methods (e.g., setName(String name)): modify the value of a 
+        private variable. They typically follow the naming convention 
+        set + VariableName and take a parameter of the same type as the variable.
+
+
+        -> Validation and Business Logic: Setter methods offer a crucial point to 
+        implement validation rules or other business logic before a value is assigned. 
+        For example, a setAge() method could ensure that only 
+        positive age values are accepted.
+    
+        -> Flexibility and Maintainability: By using getters and setters, the internal 
+        implementation of a class can be changed without affecting external 
+        code that uses the class, as long as the method signatures remain consistent.
+
+
+
+    -> Constructor or Setters 
+
+        
+9th Oct 2025
+============
+
+    -> Abstraction 
+
+        -> In object-oriented programming (OOP), abstraction is the concept of hiding 
+        complex internal implementation details and displaying only the essential features 
+        or functionality of an object to the user. 
+        
+        -> Abstraction simplifies complex systems by breaking them into smaller, manageable components 
+        and provides a clear, simplified interface for interaction. 
+        
+        -> Abstraction is implemented using abstract classes and Interfaces
+
+        -> Encapsulation 
+
+            -> Bundling data (attributes) and the methods (functions) -> Class
+            -> Hiding Data -> private access & using setters & getters
+
+        -> Abstraction means hiding implementations (functionality / methods)
+
+            -> Interfaces & Abstract Classes
+
+    -> Interfaces 
+
+        -> Interface is a Blueprint of Class 
+            -> Class is a Blueprint of Object 
+            -> Object is instance of Class 
+
+            -> Interface -> Class -> Object 
+
+        -> Interfaces contain Abstract Methods
+
+            -> Abstract Methods : Methods without Implementation
+
+            -> Concrete Methods : Methods with Implementation
+
+        -> NOTE : Interfaces are like Contracts 
+
+        -> From Laptop Example Scenario
+
+            -> interface/contract Laptop (2020)
+
+            -> interface/contract Laptop (2025)
+
+                -> Now govt passed a mandate every laptop vendor should include bio metric auth
+
+        -> If above was the situation till Java 7, we need abstract classes 
+
+        -> From Java 8, we can add special methods in Interfaces 
+
+            -> Before Java 8 Interfaces, support only Abstract Methods  
+
+        -> default methods in interface provides partial Concrete implementation 
+
+10th Oct 2025
+============
+
+    -> Abstract Classes 
+
+        -> An abstract class in Java is a class that is declared with the "abstract" keyword
+
+        -> It serves as a blueprint for other classes and cannot be instantiated directly, 
+            meaning you cannot create objects of an abstract class. 
+
+        -> Can contain abstract methods
+
+        -> Can contain concrete (non-abstract) methods
+
+        -> Abstract classes are extended by other classes using the extends keyword
+
+    -> LMS Application New Requirements to implement Abstraction
+
+        -> Interfaces (Personable.java, Payables.java)
+
+            -> Personable defines a contract for entities (like Student and Trainer)
+
+                -> managing their personal information
+
+            -> Payables defines a contract for entities that are involved in payment calculations
+
+                -> course fees for students, session payments for trainers
+
+        -> Abstract Class 
+
+            -> AbstractPerson serves as a base class to hold common attributes 
+            (like personID, personName, personAge, personMobileNumber)
+
+        -> Concrete Classes (Student.java, Trainer.java)
+
+            -> Student and Trainer classes now extend the AbstractPerson class, inheriting the 
+                common personal attributes and their management.
+
+11th Oct 2025
+=============
+
+    -> Polymorphism 
+
+        -> Polymorphism in OOP is the concept that an object can take on many forms, 
+        allowing different objects to be treated as a single type through a common interface, 
+        but each type provides its own independent implementation. 
+        
+        -> Polymorphism promotes code flexibility and extensibility 
+        by enabling a single method to have multiple behaviors,
+         often through method overloading and method overriding. 
+
+    -> Types Of Polymorphism
+
+        -> Compile Time Polymorphism
+
+            -> method overloading occurs during compile time
+            -> based on parameters passed to method
+            -> Number Of Parameters, Order Of Parameters, Type Of Parameters
+
+        -> Run Time Polymorphism
+
+            -> method overriding occurs during rune time
+            -> based on parent class implementation, provide new functionality in child class 
